@@ -1,0 +1,12 @@
+.container {
+  padding: 20px;
+  border: 15px solid #ccc;
+  border-radius: 1em;
+  width: 300px;
+}
+.number {
+  padding-top: 20px;
+}
+.button {
+  padding-top: 20px;
+}
