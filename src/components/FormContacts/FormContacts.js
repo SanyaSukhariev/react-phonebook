@@ -21,7 +21,8 @@ const FormContacts = () => {
     const ClickHandler = () => {
 
         if (name !== '' || number !== '') contacts.push({ name: name, id: uuidv4(), number: number })
-     
+        setName('')
+        setNumber('')
        
     }
     const filterList = (e) => {
@@ -30,7 +31,7 @@ const FormContacts = () => {
     }
    
     const removeItem=(contactsId)=>{
-         setContacts(contacts => contacts.filter(el => el.id !== contactsId))
+         setContacts(contacts.filter(el => el.id !== contactsId))
         console.log(contacts)
     };
     

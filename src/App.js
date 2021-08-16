@@ -1,5 +1,4 @@
 import './App.css';
-import Filter from './components/Filter/Filter';
 import FormContacts from './components/FormContacts/FormContacts';
 
 

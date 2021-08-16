@@ -8,8 +8,8 @@ const ListContacts = (props) => {
     const contact = {
         id: uuidv4()
     }
-    let contactsList = props.contacts.map((contact) => {
-        return <li key={contact.id}>{contact.name + ": " + contact.number}<button onClick={()=>props.deleteEl(contact.id)}>delete</button></li>
+    const contactsList = props.contacts.map((contact) => {
+        return <li key={contact.id}>{contact.name + ": " + contact.number}<button className={ classes.button} onClick={()=>props.deleteEl(contact.id)}>delete</button></li>
     })
     return (
         <div className={classes.container}>
