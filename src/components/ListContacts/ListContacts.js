@@ -8,7 +8,7 @@ const ListContacts = (props) => {
     const contact = {
         id: uuidv4()
     }
-    let contactsList = props.contacts.map((c) => {
+    let contactsList = props.contacts.map((contact) => {
         return <li key={contact.id}>{contact.name + ": " + contact.number}<button onClick={()=>props.deleteEl(contact.id)}>delete</button></li>
     })
     return (
