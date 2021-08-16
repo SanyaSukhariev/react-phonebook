@@ -28,12 +28,9 @@ const FormContacts = () => {
         setFilter(e.target.value)
       
     }
-    const deleteElements = () => {
-       
-    
-    }
-    const removeItem=(id)=>{
-         setContacts(prevState => prevState.filter(el => el.id !== id))
+   
+    const removeItem=(contactsId)=>{
+         setContacts(contacts => contacts.filter(el => el.id !== contactsId))
         console.log(contacts)
     };
     
@@ -93,7 +90,7 @@ const FormContacts = () => {
             <Filter filter={ filterList}/>
             <ListContacts
                 contacts={contacts.filter((item) => item.name.toLowerCase().search(filter) !== -1)}
-                deleteEl={removeItem}
+                deleteEl={ removeItem}
             />
             
             
