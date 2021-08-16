@@ -37,13 +37,7 @@ const FormContacts = () => {
         console.log(contacts)
     };
     
-//      removeContact = (contactId) => {
-//     this.setState((prevState) => {
-//       return {
-//         contacts: prevState.contacts.filter(({ id }) => id !== contactId),
-//       };
-//     });
-//   };
+
 
     useEffect(() => {
          contacts.map((i) => {
@@ -99,7 +93,7 @@ const FormContacts = () => {
             <Filter filter={ filterList}/>
             <ListContacts
                 contacts={contacts.filter((item) => item.name.toLowerCase().search(filter) !== -1)}
-                deleteEl={removeItem()}
+                deleteEl={removeItem}
             />
             
             
