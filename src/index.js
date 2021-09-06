@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
     case "REMOVE_CONTACTS":
       return{...state, contacts:state.contacts.filter(el => el.id  !== action.payload)}
      case 'RESET':
-      return { ...initialState }
+      return { ...state, name:'' ,number:''}
     
     default:
       return state
