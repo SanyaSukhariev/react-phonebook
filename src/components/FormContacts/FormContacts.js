@@ -53,11 +53,6 @@ const FormContacts = () => {
     return (
         
         <div>
-            {console.log("Name :",name)}
-            {console.log("Number :", number)}
-            {console.log("Contacts :", contacts)}
-            { console.log("Filter :", filter)}
-            
             <div className={classes.container}>
 
             <form onSubmit={(e)=>ClickHandler(e.preventDefault())}>
@@ -106,7 +101,6 @@ const FormContacts = () => {
             <Filter filter={ filterList}/>
            
             <ListContacts
-                contacts={ contacts}
                 contacts={ contacts.filter((item) => item.name.toLowerCase().search(filter) !== -1)}
                 deleteEl={ removeItem}
             />
