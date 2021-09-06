@@ -101,7 +101,7 @@ const FormContacts = () => {
             <Filter filter={ filterList}/>
            
             <ListContacts
-                contacts={ contacts.filter((item) => item.name.toLowerCase().search(filter) !== -1)}
+                contacts={ contacts.filter((item) => item.name.toLowerCase().search(filter.toLowerCase()) !== -1)}
                 deleteEl={ removeItem}
             />
             
